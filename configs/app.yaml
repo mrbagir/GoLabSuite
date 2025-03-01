@@ -1,0 +1,4 @@
+# Application configuration
+
+app:
+  name: GoLabSuite
