@@ -2,26 +2,7 @@
 
 ## 🚀 All-in-One Golang Project
 
-**GoLabSuite** is a **complete playground** designed to combine all essential knowledge and best practices needed by Golang Developers, from basic to advanced levels. This project covers various real-world use cases, technology integrations, and implementations of modern protocols and architectures.
-
-## 📂 Project Structure (High Level)
-
-```text
-GoLabSuite/
-├── project/            # Contains mini-projects like Online Shop, Rental Car, etc.
-├── protocol/            # Contains protocol implementations (HTTP, gRPC, GraphQL, MQTT, etc.)
-├── utils/                # Utilities like Cloud File, Payment Gateway, etc.
-├── cmd/                   # Application entry point
-├── database/           # Database connection setup (MySQL, PostgreSQL, MongoDB, etc.)
-├── container/          # Docker & Kubernetes configuration
-├── microservice/     # Messaging systems (RabbitMQ, Kafka, Redis)
-├── logger/               # Custom logger implementation
-├── middleware/      # Global middleware handlers
-├── .env                   # Environment configuration file
-├── .env.example    # Example environment file
-├── Makefile              # CLI automation commands
-├── go.mod                 # Go module definition
-```
+Welcome to **GoLabSuite**, a monorepo project designed to collect, demonstrate, and combine various Golang technologies into a single, comprehensive project.
 
 ## 💡 Project Goals
 
@@ -30,33 +11,45 @@ GoLabSuite/
 - **Experiment Playground:** Open space to explore new technologies.
 
 ## ✅ Key Features
+- Multi-service architecture: Online Shop, Rental Car, Exchange Rate, and more.
+- Supports various protocols: HTTP, gRPC, GraphQL, MQTT.
+- Cloud file management: AWS S3, Cloudinary, Minio.
+- Payment Gateway Integration: Midtrans, Xendit, Omise.
+- Database coverage: MySQL, PostgreSQL, MongoDB.
+- Messaging and Event Streaming: RabbitMQ, Kafka, Redis.
+- Deployment ready for Docker and Kubernetes.
 
-| Feature| Status |
-|------------------|-------|
-| REST API | ✅ |
-| gRPC API | ✅ |
-| GraphQL API | ✅ |
-| MQTT Protocol | 🔜 |
-| Payment Gateway | ✅ |
-| Cloud Storage | ✅ |
-| Multi Database | ✅ |
-| Docker Compose | ✅ |
-| Kubernetes Setup | 🔜 |
-| RabbitMQ, Kafka | ✅ |
-| Custom Logger | ✅ |
-| Middleware | ✅ |
-| Testing | 🔜 |
+## 📁 Project Structure
+```
+GoLabSuite/
+├── cmd/                    # Main entry points for each service
+├── internal/                # Business logic for each domain/service
+├── api/                      # Protocol implementations (HTTP, gRPC, GraphQL, MQTT)
+├── pkg/                      # Shared libraries (logger, middleware, utilities)
+├── deployments/              # Deployment configurations (Docker, Kubernetes)
+├── configs/                  # Configuration files (YAML, JSON)
+├── docs/                      # Documentation files
+├── tests/                     # Unit and integration tests
+├── .env                       # Environment variables
+├── Makefile                   # Task runner commands
+├── go.mod                     # Go module definition
+└── README.md                  # This file
+```
 
 ## 📖 Usage Guide
 
-### Clone Repository
+### 1. Clone Repository
 ```bash
-git clone https://github.com/username/GoLabSuite.git
+git clone https://github.com/mrbagir/GoLabSuite.git
 ```
-### Setup & Run
+### 2. Setup & Run
 ```bash
 cp .env.example .env
 make run
+```
+### 3. Run a Service (Example: Online Shop)
+```bash
+make run-onlineshop
 ```
 
 ## 📚 Detailed Documentation
