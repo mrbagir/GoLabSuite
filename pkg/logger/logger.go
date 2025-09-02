@@ -1,4 +1,10 @@
-// Package logger provides reusable components
 package logger
 
-// TODO: Implement functionality
+type Logger interface {
+	Info(msg string)
+	WithFields(fields map[string]any) Logger
+}
+
+func SetLogger(l Logger) Logger {
+	return l
+}

@@ -2,5 +2,5 @@
 package main
 
 func main() {
-	// TODO: Implement onlineshop service
+
 }
